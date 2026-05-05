@@ -1,0 +1,77 @@
+<aside class="details-card" [class.details-card--collapsed]="collapsed" aria-label="Selected node details">
+  <button
+    class="details-card__toggle"
+    type="button"
+    [attr.aria-expanded]="!collapsed"
+    title="Toggle details"
+    aria-label="Toggle details"
+    (click)="toggleCollapsed()">
+    <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+  </button>
+
+  <ng-container *ngIf="selectedNode as node; else emptySelection">
+    <div *ngIf="collapsed" class="details-card__rail">
+      <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+        <ng-container *ngIf="node.data.type === 'employee'; else railIcon">
+          {{ initials }}
+        </ng-container>
+
+        <ng-template #railIcon>
+          <i [class]="node.icon"></i>
+        </ng-template>
+      </span>
+    </div>
+
+    <ng-container *ngIf="!collapsed">
+      <header class="details-card__header">
+        <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+          <ng-container *ngIf="node.data.type === 'employee'; else headerIcon">
+            {{ initials }}
+          </ng-container>
+
+          <ng-template #headerIcon>
+            <i [class]="node.icon"></i>
+          </ng-template>
+        </span>
+
+        <div class="details-card__identity">
+          <p>{{ typeLabel }}</p>
+          <h2>{{ node.label }}</h2>
+          <span>{{ subtitle }}</span>
+        </div>
+      </header>
+
+      <div *ngIf="node.data.mail || node.data.phone" class="details-card__contact">
+        <a *ngIf="node.data.mail" [href]="'mailto:' + node.data.mail">
+          <i class="pi pi-envelope" aria-hidden="true"></i>
+          {{ node.data.mail }}
+        </a>
+
+        <a *ngIf="node.data.phone" [href]="'tel:' + node.data.phone">
+          <i class="pi pi-phone" aria-hidden="true"></i>
+          {{ node.data.phone }}
+        </a>
+      </div>
+
+      <section *ngIf="directoryPath" class="details-card__path" aria-label="Directory path">
+        <p>Directory path</p>
+        <span>{{ directoryPath }}</span>
+      </section>
+
+      <dl class="details-card__list">
+        <div *ngFor="let detail of details">
+          <dt>{{ detail.label }}</dt>
+          <dd>{{ detail.value }}</dd>
+        </div>
+      </dl>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #emptySelection>
+    <div *ngIf="!collapsed" class="details-card__empty">
+      <i class="pi pi-info-circle" aria-hidden="true"></i>
+      <h2>No node selected</h2>
+      <p>Choose a department or employee from the chart.</p>
+    </div>
+  </ng-template>
+</aside>

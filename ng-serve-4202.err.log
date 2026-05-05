@@ -1,0 +1,3491 @@
+- Generating browser application bundles (phase: setup)...
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+
+Error: src/app/org-tree.mapper.ts:16:3 - error TS2739: Type '{ key: string; label: string; data: OrgDirectoryNode; icon: string; expanded: boolean; leaf: boolean; children: OrgTreeNode[] | undefined; styleClass: string; }' is missing the following properties from type 'OrgTreeNode': hasChildren, childrenLoaded, depth
+
+ 16   return {
+      ~~~~~~~~
+ 17     key: node.id,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 24     styleClass: `org-tree-node org-tree-node--${node.type}`
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 25   };
+    ~~~~
+
+
+
+√ Browser application bundle generation complete.
+
+Error: src/app/org.service.ts:13:43 - error TS2345: Argument of type '(nodes: OrgDirectoryNode[], options?: OrgTreeMapOptions) => OrgTreeNode[]' is not assignable to parameter of type '(value: OrgDirectoryNode[], index: number) => OrgTreeNode[]'.
+  Types of parameters 'options' and 'index' are incompatible.
+    Type 'number' has no properties in common with type 'OrgTreeMapOptions'.
+
+13     return this.getOrgTreeData().pipe(map(mapOrgNodesToTreeNodes));
+                                             ~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+√ Browser application bundle generation complete.
+
+./src/app/app.component.ts:2:0-43 - Error: Module not found: Error: Can't resolve './org-tree.component' in 'C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app'
+
+./src/app/app.module.ts:9:0-56 - Error: Module not found: Error: Can't resolve './org-tree.component' in 'C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app'
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:10:16
+    10   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:10:16
+    10   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:10:16
+    10   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-tree.utils.ts:3:14 - error TS2741: Property 'manager' is missing in type '{ organization: string; department: string; employee: string; }' but required in type 'Record<OrgNodeType, string>'.
+
+3 export const ORG_NODE_TYPE_LABELS: Record<OrgNodeType, string> = {
+               ~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/org-tree.utils.ts:9:14 - error TS2741: Property 'manager' is missing in type '{ organization: string; department: string; employee: string; }' but required in type 'Record<OrgNodeType, string>'.
+
+9 export const ORG_NODE_ICON_MAP: Record<OrgNodeType, string> = {
+               ~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+
+√ Browser application bundle generation complete.
+
+./src/app/org-tree.component.ts - Error: Module build failed (from ./node_modules/@ngtools/webpack/src/ivy/index.js):
+Error: C:\Users\GaithAhmad\Desktop\gaith\app\tree Ai3\src\app\org-tree.component.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'app-org-tree' is not a known element:
+1. If 'app-org-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-org-tree></app-org-tree>
+  ~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:9:34 - error TS2307: Cannot find module './org-tree.component' or its corresponding type declarations.
+
+9 import { OrgTreeComponent } from './org-tree.component';
+                                   ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:13:17 - error NG1010: Value at position 1 in the NgModule.declarations of AppModule is not a reference
+  Value could not be determined statically.
+
+ 13   declarations: [
+                    ~
+ 14     AppComponent,
+    ~~~~~~~~~~~~~~~~~
+... 
+ 18     OrgVerticalTreeComponent
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19   ],
+    ~~~
+
+  src/app/app.module.ts:15:5
+    15     OrgTreeComponent,
+           ~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/org-details-panel.component.html:9:19 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+9     <i class="pi" [ngClass]="collapsed ? 'pi-angle-left' : 'pi-angle-right'" aria-hidden="true"></i>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:14:42 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+14       <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-details-panel.component.html:27:44 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'span'.
+
+27         <span class="details-card__avatar" [ngClass]="'details-card__avatar--' + node.data.type" aria-hidden="true">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-details-panel.component.ts:13:16
+    13   templateUrl: './org-details-panel.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgDetailsPanelComponent.
+
+
+Error: src/app/org-node-card.component.html:7:3 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'.
+
+7   [ngClass]="'node-card--' + node.data.type"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-node-card.component.ts:18:16
+    18   templateUrl: './org-node-card.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgNodeCardComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:11:23 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'i'.
+
+11         <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:18:7 - error NG8001: 'app-org-node-card' is not a known element:
+1. If 'app-org-node-card' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 18       <app-org-node-card
+          ~~~~~~~~~~~~~~~~~~
+ 19         [node]="node"
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 23         [loading]="isLoading(node)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 24         (cardClick)="nodeSelected.emit(node)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:19:9 - error NG8002: Can't bind to 'node' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'node' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+19         [node]="node"
+           ~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:20:9 - error NG8002: Can't bind to 'variant' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'variant' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+20         [variant]="'list'"
+           ~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:21:9 - error NG8002: Can't bind to 'selected' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'selected' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21         [selected]="selectedKey === node.key"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:22:9 - error NG8002: Can't bind to 'highlighted' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'highlighted' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22         [highlighted]="isHighlighted(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:23:9 - error NG8002: Can't bind to 'loading' since it isn't a known property of 'app-org-node-card'.
+1. If 'app-org-node-card' is an Angular component and it has 'loading' input, then verify that it is part of this module.
+2. If 'app-org-node-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+23         [loading]="isLoading(node)"
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:28:5 - error NG8001: 'app-org-vertical-tree' is not a known element:
+1. If 'app-org-vertical-tree' is an Angular component, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+ 28     <app-org-vertical-tree
+        ~~~~~~~~~~~~~~~~~~~~~~
+ 29       *ngIf="node.expanded && node.children?.length"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       (nodeExpanded)="nodeExpanded.emit($event)"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:30:7 - error NG8002: Can't bind to 'nodes' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'nodes' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30       [nodes]="node.children || []"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:31:7 - error NG8002: Can't bind to 'selectedKey' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'selectedKey' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+31       [selectedKey]="selectedKey"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:32:7 - error NG8002: Can't bind to 'highlightedNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'highlightedNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+32       [highlightedNodeIds]="highlightedNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:33:7 - error NG8002: Can't bind to 'loadingNodeIds' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'loadingNodeIds' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+33       [loadingNodeIds]="loadingNodeIds"
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:34:7 - error NG8002: Can't bind to 'depth' since it isn't a known property of 'app-org-vertical-tree'.
+1. If 'app-org-vertical-tree' is an Angular component and it has 'depth' input, then verify that it is part of this module.
+2. If 'app-org-vertical-tree' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+34       [depth]="depth + 1"
+         ~~~~~~~~~~~~~~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:35:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+  Type 'Event' is missing the following properties from type 'OrgTreeNode': key, label, data, icon, and 5 more.
+
+35       (nodeSelected)="nodeSelected.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:36:41 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+36       (nodeExpanded)="nodeExpanded.emit($event)"
+                                           ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+Error: src/app/org-vertical-tree.component.html:37:43 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'OrgTreeNode'.
+
+37       (nodeCollapsed)="nodeCollapsed.emit($event)">
+                                             ~~~~~~
+
+  src/app/org-vertical-tree.component.ts:7:16
+    7   templateUrl: './org-vertical-tree.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrgVerticalTreeComponent.
+
+
+

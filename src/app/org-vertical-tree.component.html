@@ -1,0 +1,40 @@
+<ul class="vertical-tree" [class.vertical-tree--root]="depth === 0">
+  <li *ngFor="let node of nodes; trackBy: trackByNode" class="vertical-tree__branch">
+    <div class="vertical-tree__row">
+      <button
+        *ngIf="node.hasChildren; else leafSpacer"
+        class="vertical-tree__toggle"
+        type="button"
+        [attr.aria-expanded]="node.expanded"
+        [attr.aria-label]="node.expanded ? 'Collapse ' + node.label : 'Expand ' + node.label"
+        (click)="toggleNode($event, node)">
+        <i class="pi" [ngClass]="node.expanded ? 'pi-chevron-down' : 'pi-chevron-right'" aria-hidden="true"></i>
+      </button>
+
+      <ng-template #leafSpacer>
+        <span class="vertical-tree__spacer" aria-hidden="true"></span>
+      </ng-template>
+
+      <app-org-node-card
+        [node]="node"
+        [variant]="'list'"
+        [selected]="selectedKey === node.key"
+        [highlighted]="isHighlighted(node)"
+        [loading]="isLoading(node)"
+        (cardClick)="nodeSelected.emit(node)">
+      </app-org-node-card>
+    </div>
+
+    <app-org-vertical-tree
+      *ngIf="node.expanded && node.children?.length"
+      [nodes]="node.children || []"
+      [selectedKey]="selectedKey"
+      [highlightedNodeIds]="highlightedNodeIds"
+      [loadingNodeIds]="loadingNodeIds"
+      [depth]="depth + 1"
+      (nodeSelected)="nodeSelected.emit($event)"
+      (nodeExpanded)="nodeExpanded.emit($event)"
+      (nodeCollapsed)="nodeCollapsed.emit($event)">
+    </app-org-vertical-tree>
+  </li>
+</ul>

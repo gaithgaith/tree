@@ -1,0 +1,243 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.details-card {
+  position: sticky;
+  top: 1rem;
+  min-height: 650px;
+  padding: 1rem;
+  border: 1px solid #d8e0eb;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(20, 32, 51, 0.08);
+}
+
+.details-card--collapsed {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 76px;
+  min-height: 650px;
+  padding: 0.8rem 0.55rem;
+}
+
+.details-card__toggle {
+  position: absolute;
+  top: 0.75rem;
+  left: -14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2563eb;
+  cursor: pointer;
+  font: inherit;
+  box-shadow: 0 8px 20px rgba(20, 32, 51, 0.12);
+}
+
+.details-card__toggle:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
+
+.details-card__header {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6edf5;
+}
+
+.details-card__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+  background: #eef4ff;
+  color: #1d4ed8;
+  font-size: 1.15rem;
+  font-weight: 850;
+}
+
+.details-card__avatar--department {
+  background: #e9f8ef;
+  color: #15803d;
+}
+
+.details-card__avatar--manager {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.details-card__avatar--employee {
+  background: #fff2e3;
+  color: #b45309;
+}
+
+.details-card__identity {
+  min-width: 0;
+}
+
+.details-card__identity p,
+.details-card__path p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.details-card__identity h2,
+.details-card__empty h2 {
+  margin: 0.12rem 0 0;
+  color: #172033;
+  font-size: 1.18rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.details-card__identity span {
+  display: block;
+  margin-top: 0.22rem;
+  color: #64748b;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.details-card__contact {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.details-card__contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  color: #1d4ed8;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.details-card__path {
+  margin-top: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.details-card__path span {
+  display: block;
+  margin-top: 0.3rem;
+  color: #1f2937;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.details-card__list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.details-card__list div {
+  display: grid;
+  grid-template-columns: minmax(94px, 0.44fr) minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: start;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.details-card__list dt,
+.details-card__list dd {
+  margin: 0;
+}
+
+.details-card__list dt {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.details-card__list dd {
+  color: #172033;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.details-card__rail {
+  margin-top: 3.2rem;
+}
+
+.details-card__rail .details-card__avatar {
+  width: 46px;
+  height: 46px;
+  font-size: 0.9rem;
+}
+
+.details-card__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.details-card__empty i {
+  color: #2563eb;
+  font-size: 1.6rem;
+}
+
+.details-card__empty p {
+  max-width: 240px;
+  margin: 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .details-card,
+  .details-card--collapsed {
+    position: static;
+    min-height: auto;
+  }
+
+  .details-card--collapsed {
+    width: auto;
+    min-height: 72px;
+  }
+
+  .details-card__toggle {
+    right: 0.75rem;
+    left: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .details-card__list div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}

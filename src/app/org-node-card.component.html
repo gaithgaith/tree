@@ -1,0 +1,36 @@
+<button
+  class="node-card"
+  [class.node-card--selected]="selected"
+  [class.node-card--highlighted]="highlighted"
+  [class.node-card--pressed]="pressed"
+  [class.node-card--list]="variant === 'list'"
+  [ngClass]="'node-card--' + node.data.type"
+  type="button"
+  [attr.aria-pressed]="selected"
+  (click)="handleClick()">
+  <span class="node-card__avatar" aria-hidden="true">
+    <ng-container *ngIf="node.data.type === 'employee'; else iconAvatar">
+      {{ initials }}
+    </ng-container>
+
+    <ng-template #iconAvatar>
+      <i [class]="node.icon"></i>
+    </ng-template>
+  </span>
+
+  <span class="node-card__copy">
+    <strong>{{ node.label }}</strong>
+    <small>{{ subtitle }}</small>
+  </span>
+
+  <span class="node-card__footer">
+    <span class="node-card__chip">{{ typeLabel }}</span>
+
+    <span *ngIf="loading" class="node-card__status">
+      <i class="pi pi-spin pi-spinner" aria-hidden="true"></i>
+      Loading
+    </span>
+
+    <span *ngIf="!loading && node.hasChildren" class="node-card__count">{{ childCountLabel }}</span>
+  </span>
+</button>

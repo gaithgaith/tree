@@ -1,0 +1,260 @@
+<section class="org-page">
+  <header class="org-page__header">
+    <div class="org-page__title">
+      <p class="eyebrow">Identity Directory</p>
+      <h1>Organization Chart</h1>
+      <p>Explore the organization, departments, and employee accounts without exposing directory prefixes.</p>
+    </div>
+
+    <div class="org-page__summary" aria-label="Directory summary">
+      <span>
+        <strong>{{ directoryStats.departments }}</strong>
+        Departments
+      </span>
+      <span *ngIf="directoryStats.managers">
+        <strong>{{ directoryStats.managers }}</strong>
+        Managers
+      </span>
+      <span>
+        <strong>{{ directoryStats.employees }}</strong>
+        Employees
+      </span>
+      <button
+        class="icon-button"
+        type="button"
+        title="Reload chart"
+        aria-label="Reload chart"
+        (click)="loadOrgTree()"
+        [disabled]="loading">
+        <i class="pi pi-refresh" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb-bar" aria-label="Selected node path">
+    <ol *ngIf="selectedPath.length; else emptyBreadcrumb">
+      <li *ngFor="let pathNode of selectedPath; let last = last; trackBy: trackByDirectoryNode">
+        <button type="button" [disabled]="last" (click)="selectBreadcrumb(pathNode)">
+          {{ getDirectoryName(pathNode) }}
+        </button>
+        <i *ngIf="!last" class="pi pi-chevron-right" aria-hidden="true"></i>
+      </li>
+    </ol>
+
+    <ng-template #emptyBreadcrumb>
+      <span>Select a node to see its path</span>
+    </ng-template>
+  </nav>
+
+  <main class="org-workspace" [class.org-workspace--details-collapsed]="detailsCollapsed">
+    <section class="chart-panel" aria-label="Organization chart workspace">
+      <div class="chart-panel__header">
+        <div>
+          <p class="eyebrow">Directory map</p>
+          <h2>{{ viewMode === 'org-chart' ? 'Org chart' : 'Tree view' }}</h2>
+        </div>
+
+        <span class="source-badge">
+          <i class="pi pi-bolt" aria-hidden="true"></i>
+          Grouped by {{ groupModeLabel }}
+        </span>
+      </div>
+
+      <div class="chart-toolbar">
+        <div class="search-area">
+          <label class="search-box">
+            <i class="pi pi-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              placeholder="Search people or departments"
+              [value]="searchTerm"
+              (input)="onSearchInput($event)" />
+
+            <button
+              *ngIf="searchTerm"
+              class="search-box__clear"
+              type="button"
+              aria-label="Clear search"
+              (click)="clearSearch()">
+              <i class="pi pi-times" aria-hidden="true"></i>
+            </button>
+          </label>
+
+          <div *ngIf="hasSearchQuery" class="search-results" aria-live="polite">
+            <div *ngIf="searchLoading" class="search-results__state">
+              <i class="pi pi-spin pi-spinner" aria-hidden="true"></i>
+              Searching
+            </div>
+
+            <ng-container *ngIf="!searchLoading">
+              <button
+                *ngFor="let result of searchResults; trackBy: trackBySearchResult"
+                class="search-result"
+                type="button"
+                (click)="selectSearchResult(result)">
+                <span class="search-result__icon" [ngClass]="'search-result__icon--' + result.node.type">
+                  <i
+                    class="pi"
+                    [ngClass]="{
+                      'pi-building': result.node.type === 'organization',
+                      'pi-sitemap': result.node.type === 'department',
+                      'pi-id-card': result.node.type === 'manager',
+                      'pi-user': result.node.type === 'employee'
+                    }"
+                    aria-hidden="true"></i>
+                </span>
+
+                <span>
+                  <strong>{{ getResultName(result) }}</strong>
+                  <small>{{ getResultSubtitle(result) }}</small>
+                  <em>{{ getResultPath(result) }}</em>
+                </span>
+              </button>
+
+              <div *ngIf="!searchResults.length" class="search-results__state">
+                No matches found
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="toolbar-actions">
+          <div class="segmented-control" role="group" aria-label="Group tree by">
+            <button
+              type="button"
+              [class.is-active]="groupMode === 'department'"
+              (click)="setGroupMode('department')">
+              <i class="pi pi-sitemap" aria-hidden="true"></i>
+              By Department
+            </button>
+            <button
+              type="button"
+              [class.is-active]="groupMode === 'manager'"
+              (click)="setGroupMode('manager')">
+              <i class="pi pi-id-card" aria-hidden="true"></i>
+              By Manager
+            </button>
+          </div>
+
+          <div class="segmented-control" role="group" aria-label="View mode">
+            <button
+              type="button"
+              [class.is-active]="viewMode === 'org-chart'"
+              (click)="setViewMode('org-chart')">
+              <i class="pi pi-sitemap" aria-hidden="true"></i>
+              Org Chart
+            </button>
+            <button
+              type="button"
+              [class.is-active]="viewMode === 'tree'"
+              (click)="setViewMode('tree')">
+              <i class="pi pi-list" aria-hidden="true"></i>
+              Tree
+            </button>
+          </div>
+
+          <div class="zoom-controls" role="group" aria-label="Chart zoom">
+            <button type="button" aria-label="Zoom out" (click)="zoomOut()" [disabled]="zoomLevel <= minZoomLevel">
+              <i class="pi pi-minus" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="zoom-controls__value" title="Reset zoom" (click)="resetZoom()">
+              {{ zoomPercent }}
+            </button>
+            <button type="button" aria-label="Zoom in" (click)="zoomIn()" [disabled]="zoomLevel >= maxZoomLevel">
+              <i class="pi pi-plus" aria-hidden="true"></i>
+            </button>
+            <button
+              type="button"
+              aria-label="Center on selected node"
+              title="Center on selected node"
+              (click)="centerOnSelectedNode()"
+              [disabled]="!selectedNode">
+              <i class="pi pi-crosshairs" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="loading" class="state-block">
+        <i class="pi pi-spin pi-spinner" aria-hidden="true"></i>
+        <span>Loading organization chart</span>
+      </div>
+
+      <div *ngIf="!loading && errorMessage" class="state-block state-block--error">
+        <i class="pi pi-exclamation-triangle" aria-hidden="true"></i>
+        <span>{{ errorMessage }}</span>
+      </div>
+
+      <div
+        *ngIf="!loading && !errorMessage"
+        #chartViewport
+        class="chart-viewport"
+        [class.chart-viewport--panning]="isPanning"
+        (pointerdown)="onViewportPointerDown($event)"
+        (pointermove)="onViewportPointerMove($event)"
+        (pointerup)="onViewportPointerUp($event)"
+        (pointercancel)="onViewportPointerUp($event)"
+        (pointerleave)="onViewportPointerUp($event)">
+        <div
+          class="chart-canvas"
+          [class.chart-canvas--tree]="viewMode === 'tree'"
+          [style.zoom]="zoomLevel">
+          <p-organizationChart
+            *ngIf="viewMode === 'org-chart'"
+            styleClass="org-directory-chart"
+            [value]="treeNodes"
+            selectionMode="single"
+            [(selection)]="selectedNode"
+            [preserveSpace]="false"
+            (onNodeSelect)="onNodeSelect($event)"
+            (onNodeUnselect)="onNodeUnselect()"
+            (onNodeExpand)="onNodeExpand($event)"
+            (onNodeCollapse)="onNodeCollapse($event)">
+            <ng-template let-node pTemplate="default">
+              <app-org-node-card
+                [node]="node"
+                [selected]="selectedNode?.key === node.key"
+                [highlighted]="isNodeHighlighted(node)"
+                [loading]="isNodeLoading(node)">
+              </app-org-node-card>
+            </ng-template>
+          </p-organizationChart>
+
+          <app-org-vertical-tree
+            *ngIf="viewMode === 'tree'"
+            [nodes]="treeNodes"
+            [selectedKey]="selectedNode?.key || null"
+            [highlightedNodeIds]="highlightedNodeIds"
+            [loadingNodeIds]="loadingNodeIds"
+            (nodeSelected)="onVerticalNodeSelected($event)"
+            (nodeExpanded)="onVerticalNodeExpanded($event)"
+            (nodeCollapsed)="onVerticalNodeCollapsed($event)">
+          </app-org-vertical-tree>
+        </div>
+
+        <aside *ngIf="viewMode === 'org-chart' && visibleNodes.length > 1" class="mini-map" aria-label="Visible nodes">
+          <div class="mini-map__header">
+            <span>Visible</span>
+            <strong>{{ visibleNodes.length }}</strong>
+          </div>
+          <div class="mini-map__dots">
+            <span
+              *ngFor="let node of visibleNodes; trackBy: trackByTreeNode"
+              [class.is-selected]="selectedNode?.key === node.key"
+              [class.is-highlighted]="isNodeHighlighted(node)"
+              [ngClass]="'mini-map__dot--' + node.data.type">
+            </span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <app-org-details-panel
+      [selectedNode]="selectedNode"
+      [details]="selectedDetails"
+      [path]="selectedPath"
+      [collapsed]="detailsCollapsed"
+      (collapsedChange)="detailsCollapsed = $event">
+    </app-org-details-panel>
+  </main>
+</section>

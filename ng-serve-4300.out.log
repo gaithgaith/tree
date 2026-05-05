@@ -1,0 +1,81 @@
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.06 MB |
+styles.css, styles.js | styles        | 325.80 kB |
+polyfills.js          | polyfills     | 238.13 kB |
+main.js               | main          | 216.40 kB |
+runtime.js            | runtime       |   6.50 kB |
+
+| Initial Total |   2.83 MB
+
+Build at: 2026-05-05T06:21:12.152Z - Hash: 47527a45532d0f79 - Time: 7040ms
+
+** Angular Live Development Server is listening on 127.0.0.1:4300, open your browser on http://127.0.0.1:4300/ **
+
+
+√ Compiled successfully.
+
+5 unchanged chunks
+
+Build at: 2026-05-05T06:37:30.479Z - Hash: 47527a45532d0f79 - Time: 2181ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 210.04 kB |
+runtime.js          | runtime |   6.50 kB |
+
+3 unchanged chunks
+
+Build at: 2026-05-05T06:37:31.495Z - Hash: 7b03024a9cd84e1f - Time: 964ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 211.44 kB |
+runtime.js          | runtime |   6.50 kB |
+
+3 unchanged chunks
+
+Build at: 2026-05-05T07:15:50.793Z - Hash: 88a3aba07a5ac6d3 - Time: 1287ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   | Raw Size
+runtime.js          | runtime |  6.50 kB |
+
+4 unchanged chunks
+
+Build at: 2026-05-05T07:27:17.078Z - Hash: 06d5e91e4a8f499b - Time: 1740ms
+
+× Failed to compile.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 214.84 kB |
+runtime.js          | runtime |   6.50 kB |
+
+3 unchanged chunks
+
+Build at: 2026-05-05T07:27:18.097Z - Hash: 0624a92d35505556 - Time: 969ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 214.95 kB |
+runtime.js          | runtime |   6.50 kB |
+
+3 unchanged chunks
+
+Build at: 2026-05-05T07:27:59.110Z - Hash: c5627a30e7484720 - Time: 1530ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 219.40 kB |
+runtime.js          | runtime |   6.50 kB |
+
+3 unchanged chunks
+
+Build at: 2026-05-05T07:28:00.835Z - Hash: 357891abf0cac82c - Time: 1680ms
+
+√ Compiled successfully.

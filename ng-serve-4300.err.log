@@ -1,0 +1,23 @@
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+Error: src/app/org-tree.utils.ts:3:14 - error TS2741: Property 'manager' is missing in type '{ organization: string; department: string; employee: string; }' but required in type 'Record<OrgNodeType, string>'.
+
+3 export const ORG_NODE_TYPE_LABELS: Record<OrgNodeType, string> = {
+               ~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/org-tree.utils.ts:9:14 - error TS2741: Property 'manager' is missing in type '{ organization: string; department: string; employee: string; }' but required in type 'Record<OrgNodeType, string>'.
+
+9 export const ORG_NODE_ICON_MAP: Record<OrgNodeType, string> = {
+               ~~~~~~~~~~~~~~~~~
+
+
+
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
