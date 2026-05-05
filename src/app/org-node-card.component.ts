@@ -56,6 +56,14 @@ export class OrgNodeCardComponent implements OnDestroy {
     return `${count} ${count === 1 ? 'child' : 'children'}`;
   }
 
+  get shouldShowDetailsInline(): boolean {
+    return this.variant === 'list';
+  }
+
+  get shouldShowCompactCount(): boolean {
+    return this.variant === 'chart' && !this.loading && this.node.hasChildren;
+  }
+
   handleClick(): void {
     this.pressed = true;
     this.cardClick.emit(this.node);

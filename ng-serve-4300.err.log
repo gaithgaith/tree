@@ -21,3 +21,188 @@ Error: src/app/org-tree.utils.ts:9:14 - error TS2741: Property 'manager' is miss
 ✔ Browser application bundle generation complete.
 ✔ Browser application bundle generation complete.
 ✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+./src/app/mock-org-data.ts:8:29 - Error: Module parse failed: Unterminated string constant (8:29)
+File was processed with these loaders:
+ * ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js
+ * ./node_modules/@ngtools/webpack/src/ivy/index.js
+You may need an additional loader to handle the result of these loaders.
+|         "department": ""
+|     },
+>     { "manager": "ho034800", "s... by Gaith Ahmad: 12, 33: PM,
+|         Gaith, Ahmad },
+|     {
+
+Error: src/app/mock-org-data.ts:17:42 - error TS2322: Type '{ manager: string; "s... by Gaith Ahmad": number; 33: any; Gaith: any; Ahmad: any; }' is not assignable to type 'OrgDirectoryRecord'.
+  Object literal may only specify known properties, and '"s... by Gaith Ahmad' does not exist in type 'OrgDirectoryRecord'.
+
+17 {         "manager": "ho034800",         "s... by Gaith Ahmad
+                                            ~~~~~~~~~~~~~~~~~~~~
+18 12:33 PM
+   ~~
+
+
+Error: src/app/mock-org-data.ts:17:62 - error TS1002: Unterminated string literal.
+
+17 {         "manager": "ho034800",         "s... by Gaith Ahmad
+                                                                
+
+
+Error: src/app/mock-org-data.ts:18:1 - error TS1005: ':' expected.
+
+18 12:33 PM
+   ~~
+
+
+Error: src/app/mock-org-data.ts:18:3 - error TS1005: ',' expected.
+
+18 12:33 PM
+     ~
+
+
+Error: src/app/mock-org-data.ts:18:7 - error TS1005: ':' expected.
+
+18 12:33 PM
+         ~~
+
+
+Error: src/app/mock-org-data.ts:18:7 - error TS2304: Cannot find name 'PM'.
+
+18 12:33 PM
+         ~~
+
+
+Error: src/app/mock-org-data.ts:19:1 - error TS1005: ',' expected.
+
+19 Gaith Ahmad
+   ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:1 - error TS18004: No value exists in scope for the shorthand property 'Gaith'. Either declare one or provide an initializer.
+
+19 Gaith Ahmad
+   ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:7 - error TS1005: ',' expected.
+
+19 Gaith Ahmad
+         ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:7 - error TS18004: No value exists in scope for the shorthand property 'Ahmad'. Either declare one or provide an initializer.
+
+19 Gaith Ahmad
+         ~~~~~
+
+
+Error: src/app/mock-org-data.ts:21:1 - error TS1005: ',' expected.
+
+21 {
+   ~
+
+
+
+✔ Browser application bundle generation complete.
+
+./src/app/mock-org-data.ts:8:29 - Error: Module parse failed: Unterminated string constant (8:29)
+File was processed with these loaders:
+ * ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js
+ * ./node_modules/@ngtools/webpack/src/ivy/index.js
+You may need an additional loader to handle the result of these loaders.
+|         "department": ""
+|     },
+>     { "manager": "ho034800", "s... by Gaith Ahmad: 12, 33: PM,
+|         Gaith, Ahmad },
+|     {
+
+Error: src/app/mock-org-data.ts:5:1 - error TS2304: Cannot find name 'zz'.
+
+5 zz {
+  ~~
+
+
+Error: src/app/mock-org-data.ts:5:4 - error TS1005: ',' expected.
+
+5 zz {
+     ~
+
+
+Error: src/app/mock-org-data.ts:17:62 - error TS1002: Unterminated string literal.
+
+17 {         "manager": "ho034800",         "s... by Gaith Ahmad
+                                                                
+
+
+Error: src/app/mock-org-data.ts:18:1 - error TS1005: ':' expected.
+
+18 12:33 PM
+   ~~
+
+
+Error: src/app/mock-org-data.ts:18:3 - error TS1005: ',' expected.
+
+18 12:33 PM
+     ~
+
+
+Error: src/app/mock-org-data.ts:18:7 - error TS1005: ':' expected.
+
+18 12:33 PM
+         ~~
+
+
+Error: src/app/mock-org-data.ts:18:7 - error TS2304: Cannot find name 'PM'.
+
+18 12:33 PM
+         ~~
+
+
+Error: src/app/mock-org-data.ts:19:1 - error TS1005: ',' expected.
+
+19 Gaith Ahmad
+   ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:1 - error TS18004: No value exists in scope for the shorthand property 'Gaith'. Either declare one or provide an initializer.
+
+19 Gaith Ahmad
+   ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:7 - error TS1005: ',' expected.
+
+19 Gaith Ahmad
+         ~~~~~
+
+
+Error: src/app/mock-org-data.ts:19:7 - error TS18004: No value exists in scope for the shorthand property 'Ahmad'. Either declare one or provide an initializer.
+
+19 Gaith Ahmad
+         ~~~~~
+
+
+Error: src/app/mock-org-data.ts:21:1 - error TS1005: ',' expected.
+
+21 {
+   ~
+
+
+
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.

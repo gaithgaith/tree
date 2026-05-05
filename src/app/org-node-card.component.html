@@ -20,10 +20,14 @@
 
   <span class="node-card__copy">
     <strong>{{ node.label }}</strong>
-    <small>{{ subtitle }}</small>
+    <small *ngIf="shouldShowDetailsInline">{{ subtitle }}</small>
   </span>
 
-  <span class="node-card__footer">
+  <span *ngIf="shouldShowCompactCount" class="node-card__compact-count" aria-label="Child nodes">
+    {{ node.data.children.length }}
+  </span>
+
+  <span *ngIf="shouldShowDetailsInline || loading" class="node-card__footer">
     <span class="node-card__chip">{{ typeLabel }}</span>
 
     <span *ngIf="loading" class="node-card__status">

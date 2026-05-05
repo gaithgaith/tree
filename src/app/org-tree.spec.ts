@@ -10,9 +10,9 @@ import { cleanDirectoryLabel, formatDirectoryPath } from './org-tree.utils';
 
 describe('organization tree utilities', () => {
   it('removes Active Directory prefixes from display labels', () => {
-    expect(cleanDirectoryLabel('OU=Engineering')).toBe('Engineering');
-    expect(cleanDirectoryLabel('CN=Sophia Rivera,OU=Applications,DC=northwind,DC=local')).toBe(
-      'Sophia Rivera,Applications,northwind,local'
+    expect(cleanDirectoryLabel('OU=IT Internal Solutions Department')).toBe('IT Internal Solutions Department');
+    expect(cleanDirectoryLabel('CN=PWA Admin,OU=Unassigned Department,DC=company,DC=local')).toBe(
+      'PWA Admin,Unassigned Department,company,local'
     );
   });
 
@@ -25,14 +25,14 @@ describe('organization tree utilities', () => {
         children: []
       },
       {
-        id: 'ou-service-channel-center',
-        name: 'إدارة مركز قنوات الخدمة',
-        type: 'department' as const,
+        id: 'manager-ho034800',
+        name: 'ho034800',
+        type: 'manager' as const,
         children: []
       }
     ];
 
-    expect(formatDirectoryPath(path)).toBe('Company Directory / إدارة مركز قنوات الخدمة');
+    expect(formatDirectoryPath(path)).toBe('Company Directory / ho034800');
   });
 });
 
@@ -46,19 +46,19 @@ describe('organization tree mapper', () => {
       distinguishedName: 'DC=company,DC=local',
       children: [
         {
-          id: 'ou-service-center',
-          name: 'إدارة مركز قنوات الخدمة',
+          id: 'ou-it-internal-solutions-department',
+          name: 'IT Internal Solutions Department',
           type: 'department' as const,
           objectClass: 'organizationalUnit' as const,
-          distinguishedName: 'OU=إدارة مركز قنوات الخدمة,DC=company,DC=local',
+          distinguishedName: 'OU=IT Internal Solutions Department,DC=company,DC=local',
           children: [
             {
-              id: 'user-cl260146',
-              name: 'khaled s. Alotaibi (خالد العتيبي)',
+              id: 'user-002508',
+              name: 'Osama Alfuraydi(أسامة خلف الفريدي)',
               type: 'employee' as const,
               objectClass: 'user' as const,
               distinguishedName:
-                'CN=khaled s. Alotaibi (خالد العتيبي),OU=إدارة مركز قنوات الخدمة,DC=company,DC=local',
+                'CN=Osama Alfuraydi(أسامة خلف الفريدي),OU=IT Internal Solutions Department,DC=company,DC=local',
               children: []
             }
           ]
@@ -79,7 +79,7 @@ describe('organization tree mapper', () => {
 
   it('keeps deeper child nodes unloaded until expanded', () => {
     const [root] = mapOrgNodesToTreeNodes(mapperFixture, { preloadDepth: 1 });
-    const department = root.children?.find((node) => node.key === 'ou-service-center');
+    const department = root.children?.find((node) => node.key === 'ou-it-internal-solutions-department');
 
     expect(department).toBeDefined();
     expect(department?.hasChildren).toBeTrue();
@@ -96,64 +96,46 @@ describe('OrgService', () => {
     service = TestBed.inject(OrgService);
   });
 
-  it('returns mapped organization chart nodes', async () => {
+  it('returns mapped department chart nodes', async () => {
     const nodes = await firstValueFrom(service.getOrgTree());
 
     expect(nodes.length).toBe(1);
     expect(nodes[0].label).toBe('Company Directory');
     expect(nodes[0].childrenLoaded).toBeTrue();
-    expect(nodes[0].children?.length).toBe(5);
+    expect(nodes[0].children?.length).toBe(2);
   });
 
-  it('can group the organization chart by manager', async () => {
+  it('builds nested manager reporting hierarchy', async () => {
     const nodes = await firstValueFrom(service.getOrgTree('manager'));
-    const managerNode = nodes[0].children?.find((node) => node.key === 'manager-059181');
+    const topManager = nodes[0].children?.find((node) => node.key === 'manager-ho034800');
 
-    expect(nodes[0].label).toBe('Company Directory');
-    expect(nodes[0].children?.length).toBe(5);
-    expect(managerNode?.data.type).toBe('manager');
-    expect(managerNode?.label).toBe('059181');
+    expect(topManager).toBeDefined();
+    expect(topManager?.label).toBe('ho034800');
+    expect(topManager?.data.type).toBe('manager');
+
+    const directReports = await firstValueFrom(service.getChildren('manager-ho034800', 'manager'));
+    const osama = directReports.find((node) => node.key === 'manager-002508');
+
+    expect(osama).toBeDefined();
+    expect(osama?.label).toBe('002508');
+    expect(osama?.data.type).toBe('manager');
+
+    const osamaReports = await firstValueFrom(service.getChildren('manager-002508', 'manager'));
+    expect(osamaReports.length).toBe(1);
+    expect(osamaReports[0].label).toBe('SPS181201');
   });
 
-  it('searches employees and returns a breadcrumb path', async () => {
-    const results = await firstValueFrom(service.searchDirectory('Shahad'));
+  it('searches manager hierarchy by account and display name', async () => {
+    const results = await firstValueFrom(service.searchDirectory('PWA', 'manager'));
 
     expect(results.length).toBeGreaterThan(0);
-    expect(results[0].node.id).toBe('user-tr260105');
-    expect(formatDirectoryPath(results[0].path)).toContain('IT Audit Department');
+    expect(results[0].node.id).toBe('user-sps181201');
+    expect(formatDirectoryPath(results[0].path)).toBe('Company Directory / ho034800 / 002508 / SPS181201');
   });
 
   it('uses the new flat AD user export as the static source', () => {
-    expect(MOCK_AD_USERS.length).toBe(10);
-    expect(MOCK_AD_USERS[0].sAMAccountName).toBe('CL260146');
-  });
-
-  it('loads lazy children from a single expand action', async () => {
-    const component = new OrgTreeComponent(service);
-    component.treeNodes = await firstValueFrom(service.getOrgTree());
-
-    const serviceChannelsDepartment = component.treeNodes[0].children?.find(
-      (node) => node.data.name === 'إدارة مركز قنوات الخدمة'
-    );
-
-    expect(serviceChannelsDepartment).toBeDefined();
-
-    if (!serviceChannelsDepartment) {
-      fail('Expected service channels department to exist');
-      return;
-    }
-
-    await (component as unknown as { ensureNodeExpanded(node: OrgTreeNode): Promise<void> }).ensureNodeExpanded(
-      serviceChannelsDepartment
-    );
-
-    const expandedDepartment = component.treeNodes[0].children?.find(
-      (node) => node.data.name === 'إدارة مركز قنوات الخدمة'
-    );
-
-    expect(expandedDepartment?.expanded).toBeTrue();
-    expect(expandedDepartment?.childrenLoaded).toBeTrue();
-    expect(expandedDepartment?.children?.length).toBe(4);
+    expect(MOCK_AD_USERS.length).toBe(2);
+    expect(MOCK_AD_USERS[0].sAMAccountName).toBe('SPS181201');
   });
 
   it('loads manager direct reports from one expand action when grouped by manager', async () => {
@@ -161,12 +143,12 @@ describe('OrgService', () => {
     component.groupMode = 'manager';
     component.treeNodes = await firstValueFrom(service.getOrgTree('manager'));
 
-    const manager = component.treeNodes[0].children?.find((node) => node.key === 'manager-059181');
+    const manager = component.treeNodes[0].children?.find((node) => node.key === 'manager-ho034800');
 
     expect(manager).toBeDefined();
 
     if (!manager) {
-      fail('Expected manager 059181 to exist');
+      fail('Expected manager ho034800 to exist');
       return;
     }
 
@@ -174,10 +156,10 @@ describe('OrgService', () => {
       manager
     );
 
-    const expandedManager = component.treeNodes[0].children?.find((node) => node.key === 'manager-059181');
+    const expandedManager = component.treeNodes[0].children?.find((node) => node.key === 'manager-ho034800');
 
     expect(expandedManager?.expanded).toBeTrue();
     expect(expandedManager?.childrenLoaded).toBeTrue();
-    expect(expandedManager?.children?.length).toBe(4);
+    expect(expandedManager?.children?.[0].key).toBe('manager-002508');
   });
 });

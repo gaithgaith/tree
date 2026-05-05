@@ -181,7 +181,8 @@ export class OrgService {
 
   private buildManagerDirectory(records: OrgDirectoryRecord[]): OrgDirectoryNode[] {
     const rootDomain = 'company.local';
-    const managers = new Map<string, OrgDirectoryNode>();
+    const recordsByAccountName = new Map<string, OrgDirectoryRecord>();
+    const directReportsByManager = new Map<string, OrgDirectoryRecord[]>();
     const rootNode: OrgDirectoryNode = {
       id: 'dc-company',
       name: 'Company Directory',
@@ -193,17 +194,29 @@ export class OrgService {
     };
 
     records.forEach((record) => {
+      recordsByAccountName.set(record.sAMAccountName.trim(), record);
+    });
+
+    records.forEach((record) => {
       const managerAccountName = record.manager.trim() || 'Unassigned Manager';
-      const managerNode = this.getOrCreateManagerNode(managers, managerAccountName, rootDomain);
-      const departmentName = record.department.trim() || 'Unassigned Department';
-
-      managerNode.children.push(this.createEmployeeNode(record, departmentName, rootDomain));
+      const directReports = directReportsByManager.get(managerAccountName) ?? [];
+      directReports.push(record);
+      directReportsByManager.set(managerAccountName, directReports);
     });
 
-    rootNode.children = Array.from(managers.values()).sort((first, second) => first.name.localeCompare(second.name));
-    rootNode.children.forEach((manager) => {
-      manager.children.sort((first, second) => first.name.localeCompare(second.name));
-    });
+    const topManagerAccountNames = Array.from(directReportsByManager.keys())
+      .filter((managerAccountName) => !recordsByAccountName.has(managerAccountName))
+      .sort((first, second) => first.localeCompare(second));
+
+    rootNode.children = topManagerAccountNames.map((managerAccountName) =>
+      this.createManagerPlaceholderNode(managerAccountName, rootDomain, directReportsByManager, new Set<string>())
+    );
+
+    const recordsWithoutManager = records
+      .filter((record) => !record.manager.trim())
+      .map((record) => this.createReportingNode(record, rootDomain, directReportsByManager, new Set<string>()));
+
+    rootNode.children.push(...recordsWithoutManager);
 
     return [rootNode];
   }
@@ -262,6 +275,81 @@ export class OrgService {
     managers.set(managerId, managerNode);
 
     return managerNode;
+  }
+
+  private createManagerPlaceholderNode(
+    managerAccountName: string,
+    rootDomain: string,
+    directReportsByManager: Map<string, OrgDirectoryRecord[]>,
+    visitedAccountNames: Set<string>
+  ): OrgDirectoryNode {
+    const reports = directReportsByManager.get(managerAccountName) ?? [];
+
+    return {
+      id: this.createStableId('manager', managerAccountName),
+      name: managerAccountName,
+      type: 'manager',
+      objectClass: 'organizationalUnit',
+      distinguishedName: `CN=${managerAccountName},OU=Managers,DC=company,DC=local`,
+      description: `Manager grouping in ${rootDomain}`,
+      managerAccountName,
+      children: reports
+        .map((record) => this.createReportingNode(record, rootDomain, directReportsByManager, visitedAccountNames))
+        .sort((first, second) => first.name.localeCompare(second.name))
+    };
+  }
+
+  private createReportingNode(
+    record: OrgDirectoryRecord,
+    rootDomain: string,
+    directReportsByManager: Map<string, OrgDirectoryRecord[]>,
+    visitedAccountNames: Set<string>
+  ): OrgDirectoryNode {
+    const accountName = record.sAMAccountName.trim();
+    const departmentName = record.department.trim() || 'Unassigned Department';
+    const reports = directReportsByManager.get(accountName) ?? [];
+    const hasReports = reports.length > 0;
+    const nextVisitedAccountNames = new Set<string>(visitedAccountNames);
+
+    if (nextVisitedAccountNames.has(accountName)) {
+      return {
+        ...this.createManagerModePersonNode(record, departmentName, rootDomain, hasReports),
+        description: `${record.displayName} - reporting cycle detected`,
+        children: []
+      };
+    }
+
+    nextVisitedAccountNames.add(accountName);
+
+    return {
+      ...this.createManagerModePersonNode(record, departmentName, rootDomain, hasReports),
+      children: reports
+        .map((report) => this.createReportingNode(report, rootDomain, directReportsByManager, nextVisitedAccountNames))
+        .sort((first, second) => first.name.localeCompare(second.name))
+    };
+  }
+
+  private createManagerModePersonNode(
+    record: OrgDirectoryRecord,
+    departmentName: string,
+    rootDomain: string,
+    hasReports: boolean
+  ): OrgDirectoryNode {
+    return {
+      id: this.createStableId(hasReports ? 'manager' : 'user', record.sAMAccountName),
+      name: record.sAMAccountName,
+      type: hasReports ? 'manager' : 'employee',
+      objectClass: 'user',
+      distinguishedName: `CN=${record.displayName},OU=${departmentName},DC=company,DC=local`,
+      description: record.displayName,
+      department: departmentName,
+      managerId: this.createStableId('manager', record.manager || 'Unassigned Manager'),
+      managerAccountName: record.manager,
+      employeeId: record.sAMAccountName,
+      sAMAccountName: record.sAMAccountName,
+      userPrincipalName: `${record.sAMAccountName}@${rootDomain}`,
+      children: []
+    };
   }
 
   private createEmployeeNode(
